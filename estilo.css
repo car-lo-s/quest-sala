@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  header {
+    background-color: lightseagreen;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+    font-family: 'Oswald', sans-serif;
+  }
+  footer{
+    background-color: lightseagreen;
+    padding: 10px;
+    text-align: center;
+    font-size: small;
+    font-family: 'Oswald', sans-serif;
+  }
+  .geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .geral button {
+      margin: 20px;
+    padding: 0.8em 1.8em;
+    border: 2px solid lightseagreen;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    font-family: inherit;
+    color: lightseagreen;
+  }
+  
+  .geral button::before {
+    content: "";
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: lightseagreen;
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+  
+  .geral button:hover::before {
+    width: 105%;
+  }
+  
+  .geral button:hover {
+    color: #111;
+  }
+  
+  .questao p {
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 10px 10px 20px 10px;
+  }
+  .questao {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 2px solid lightseagreen;
+    width: 100%;
+  }
+  .questao input {
+    width: 30px;
+    margin: 10px 10px 20px 0px;
+    border: none;
+    border-bottom: 2px solid lightseagreen;
+    outline: none;
+  }
+  @media (max-width:600px){
+      .questao p{
+          font-size: large;
+      }
+      .questao div{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+      }
+  }
